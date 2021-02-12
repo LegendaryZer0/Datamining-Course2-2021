@@ -4,8 +4,8 @@
 # In[1]:
 
 
-print("Mock script started work!")
-print("Mock script ended work!")
+print("Hello world")
+
 
 
 
