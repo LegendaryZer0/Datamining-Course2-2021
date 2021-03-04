@@ -4,9 +4,7 @@
 # In[1]:
 
 
-print("Hello world")
-
-
+print("Hellow world")
 
 
 # In[ ]:
