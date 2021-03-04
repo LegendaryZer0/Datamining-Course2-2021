@@ -2,8 +2,6 @@
 # coding: utf-8
 
 # In[5]:
-
-
 #!pip install psycopg2
 import psycopg2
 from psycopg2 import *
@@ -14,7 +12,6 @@ from psycopg2 import *
 
 from pprint import pprint
 import vk_api
-import re
 import sys
 
 import logging as log
