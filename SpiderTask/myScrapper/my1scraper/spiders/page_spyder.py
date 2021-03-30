@@ -247,5 +247,3 @@ class PageSpider(scrapy.Spider):
             yield scrapy.Request(url=url_without_query_string,
                                  callback=self.parse,
                                  meta={'depth': next_crawl_depth, 'referer': response.request.url})
-
-
