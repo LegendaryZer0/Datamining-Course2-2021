@@ -67,10 +67,7 @@ class PageSpider(scrapy.Spider):
         fig.set_facecolor('floralwhite')
         plt.xticks(rotation=90)
         o = urlparse(self.start_urls[0])
-        png_name = "/var/www/html/2hw/pictures/" + o.netloc + '.png'
 
-        plt.savefig(png_name, bbox_inches="tight")
-        plt.show()
 
     def __init__(self):
         dispatcher.connect(self.spider_closed, signals.spider_closed)
