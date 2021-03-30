@@ -15,7 +15,7 @@ import psycopg2.extras
 class PageSpider(scrapy.Spider):
     name = 'page_spider'
 
-    start_urls = ['https://www.citilink.ru/']
+    start_urls = ['https://edu.tatar.ru/logon']
     # start_urls = ['https://coinmarketcap.com/']
 
     DEPTH_OF_SCRAPING = 3
@@ -48,7 +48,7 @@ class PageSpider(scrapy.Spider):
         listkeys = dict2.keys()
         listvalues = list(listvalues)[0:min(100,len(listvalues))]
         listkeys = list(listkeys)[0:min(100,len(listkeys))]
-        listFinalValuesToBd = [(listkeys[i],listvalues[i]) for i in range(0,30) ]
+        listFinalValuesToBd = [(listkeys[i],listvalues[i]) for i in range(0,min(100,len(listvalues)))]
         print("INSERTED FINAL VALUES TO BD")
         pprint(listFinalValuesToBd )
         final_records = ", ".join(["%s"] * len(listFinalValuesToBd))
