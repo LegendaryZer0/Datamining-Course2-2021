@@ -48,7 +48,7 @@ class PageSpider(scrapy.Spider):
         listkeys = dict2.keys()
         listvalues = list(listvalues)[0:min(100,len(listvalues))]
         listkeys = list(listkeys)[0:min(100,len(listkeys))]
-        listFinalValuesToBd = [(listkeys[i],listvalues[i]) for i in range(0,min(100,len(listvalues)))]
+        listFinalValuesToBd = [(listkeys[i],listvalues[i]) for i in range(0,min(100,len(listkeys)))]
         print("INSERTED FINAL VALUES TO BD")
         pprint(listFinalValuesToBd )
         final_records = ", ".join(["%s"] * len(listFinalValuesToBd))
