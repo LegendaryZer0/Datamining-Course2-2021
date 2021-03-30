@@ -15,7 +15,7 @@ import psycopg2.extras
 class PageSpider(scrapy.Spider):
     name = 'page_spider'
 
-    start_urls = ['https://edu.tatar.ru/logon']
+    start_urls = ['https://www.fix.ru/']
     # start_urls = ['https://coinmarketcap.com/']
 
     DEPTH_OF_SCRAPING = 3
