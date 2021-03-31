@@ -46,9 +46,9 @@ class PageSpider(scrapy.Spider):
         dict2 = dict(sorted(dict2.items(), key=lambda item: item[1], reverse=True))
         listvalues = dict2.values()
         listkeys = dict2.keys()
-        listvalues = list(listvalues)[0:min(100,len(listvalues))]
-        listkeys = list(listkeys)[0:min(100,len(listkeys))]
-        listFinalValuesToBd = [(listkeys[i],listvalues[i]) for i in range(0,min(100,len(listkeys)))]
+        listvalues = list(listvalues)[0:100,len(listvalues)]
+        listkeys = list(listkeys)[0:100,len(listkeys)]
+        listFinalValuesToBd = [(listkeys[i],listvalues[i]) for i in range(0,len(listkeys))]
         print("INSERTED FINAL VALUES TO BD LEN IS :")
         print(min(100,len(listkeys)))
         pprint(listFinalValuesToBd )
